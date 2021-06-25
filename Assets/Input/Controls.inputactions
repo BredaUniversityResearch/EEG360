@@ -1,0 +1,61 @@
+{
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "User",
+            "id": "fdf0773f-d006-43ec-b675-7ee4f1b218c8",
+            "actions": [
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "54e82e78-b987-45c7-827e-6d83b7e7f7ab",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6c363bcc-4c4e-43c7-b3ac-20e541586c17",
+                    "path": "*/{PrimaryTrigger}",
+                    "interactions": "",
+                    "processors": "AxisDeadzone",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b80ef96c-cbf7-4613-b6c4-c1c504529457",
+                    "path": "*/{Submit}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Default",
+            "bindingGroup": "Default",
+            "devices": [
+                {
+                    "devicePath": "<XRController>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}

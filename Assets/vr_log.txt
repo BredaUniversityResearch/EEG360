@@ -1,0 +1,47 @@
+time,type,text
+1616144016598,log,Show Text
+1616144022725,log,Hide Text
+1616144099843,log,Video not found: 
+1616144099847,log,Hide Video
+1616144195838,log,Show Text
+1616144197259,log,Show Video: ParcticeVideo.mp4
+1616144201001,log,Hide Text
+1616144217626,log,Hide Video
+1616144226184,log,Show Video: ParcticeVideo.mp4
+1616144246458,log,Hide Video
+1616144246463,log,Hide Video
+1616144956806,log,Show Text
+1616144960690,log,Show Video: ParcticeVideo.mp4
+1616144961958,log,Hide Text
+1616144980899,log,Hide Video
+1616144990782,log,Show Video: ParcticeVideo.mp4
+1616145010969,log,Hide Video
+1616145010974,log,Hide Video
+1616145028273,log,Show Video: ParcticeVideo.mp4
+1616145048455,log,Hide Video
+1616145048459,log,Hide Video
+1616145048464,log,Hide Video
+1616145139873,log,Video not found: P
+1616145139877,log,Hide Video
+1616145150839,log,Hide Video
+1616145150849,log,Video not found: P
+1616145150853,log,Hide Video
+1616145725419,log,Show Text
+1616145730405,log,Show Video: ParcticeVideo.mp4
+1616145730607,log,Hide Text
+1616145750476,log,Hide Video
+1616145955278,log,Show Text
+1616145960390,log,Hide Text
+1616145962664,log,Show Video: ParcticeVideo.mp4
+1616145982736,log,Hide Video
+1616145990406,log,Show Video: ParcticeVideo.mp4
+1616146010483,log,Hide Video
+1616146013355,log,Show Video: ParcticeVideo.mp4
+1616146033434,log,Hide Video
+1616146049798,log,Video not found: P
+1616146049802,log,Hide Video
+1616146053194,log,Hide Video
+1616146053200,log,Video not found: P
+1616146053204,log,Hide Video
+1624606770683,log,Show Text
+1624606776106,log,Hide Text

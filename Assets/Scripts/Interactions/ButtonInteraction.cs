@@ -20,6 +20,8 @@ public class ButtonInteraction : InteractionObject
     [SerializeField]
     private ButtonSprites[] m_buttonSprites;
 
+    [SerializeField]
+    private RectTransform m_buttonsParent;
 
     private ServerMessage m_interactionData;
 
@@ -60,12 +62,19 @@ public class ButtonInteraction : InteractionObject
             //Creat object
             button = Instantiate<GameObject>(m_buttonPrefab);
 
-
-            //Set Position
-            button.transform.SetParent(this.transform);
-            Vector3 position = m_buttonStartPosition.GetComponent<RectTransform>().localPosition;
-            Vector2 scale = button.GetComponent<RectTransform>().sizeDelta;
-            button.transform.localPosition = m_buttonStartPosition.localPosition + (m_buttonEndPosition.localPosition - m_buttonStartPosition.localPosition) / (m_interactionData.amount - 1) * i;
+            if (m_buttonsParent == null)
+            {
+                //Set Position
+                button.transform.SetParent(this.transform);
+                Vector3 position = m_buttonStartPosition.GetComponent<RectTransform>().localPosition;
+                Vector2 scale = button.GetComponent<RectTransform>().sizeDelta;
+                button.transform.localPosition = m_buttonStartPosition.localPosition + (m_buttonEndPosition.localPosition - m_buttonStartPosition.localPosition) / (m_interactionData.amount - 1) * i;
+            }
+            else
+            {
+                button.transform.SetParent(m_buttonsParent);
+                button.transform.localPosition = new Vector3(0, 0, 0);
+            }
 
             //Set button content
             if (m_interactionData.type == "information")//(m_interactionData.type == "question") || (m_interactionData.type == "information"))

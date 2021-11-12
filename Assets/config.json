@@ -8,6 +8,6 @@
 		"b": 0.2,
 		"a": 1.0
 	},
-	"m_startingMessage": "type=text|text=this is quite a thinng|duration=5000",
+	"m_startingMessage": "type=focus|label1=#313131FF|duration=2000",
 	"m_controllers": true
 }

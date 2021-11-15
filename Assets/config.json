@@ -8,6 +8,6 @@
 		"b": 0.2,
 		"a": 1.0
 	},
-	"m_startingMessage": "type=focus|label1=#313131FF|duration=2000",
+	"m_startingMessage": "type=question|text=Hoe comfortabel ben je?|amount=5|label1=totaal niet|label2=|label3=|label4=|label5=heel erg",
 	"m_controllers": true
 }

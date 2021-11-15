@@ -455,8 +455,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 40f4d312888279d48a3512af2cec6b30, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 5538893704823062908}
   - component: {fileID: 6690784996104198949}
   m_Layer: 5
-  m_Name: ButtonInteraction
+  m_Name: VerticalButtonInteraction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -559,7 +559,6 @@ MonoBehaviour:
   m_buttonPrefab: {fileID: 0}
   m_buttonStartPosition: {fileID: 3192098169697859435}
   m_buttonEndPosition: {fileID: 6516666237426027559}
-  m_butOrient: 1
   m_buttonSprites:
   - {fileID: 9159643778626185097}
   - {fileID: 6723371848849864749}
@@ -567,6 +566,7 @@ MonoBehaviour:
   - {fileID: 5096401421372174306}
   - {fileID: 4050532750407096432}
   - {fileID: 5161679964678788103}
+  m_buttonsParent: {fileID: 0}
 --- !u!1 &5559150882240210441
 GameObject:
   m_ObjectHideFlags: 0

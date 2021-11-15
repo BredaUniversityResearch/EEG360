@@ -130,3 +130,10 @@ time,type,text
 1636716769472,log,Answer Question: 1
 1636716803107,log,Show Question: How negative or positive did you feel <br> while watching the video?
 1636716806093,log,Answer Question: 4
+1636991639970,log,Show Question: How negative or positive did you feel <br> while watching the video?
+1636991649402,log,Answer Question: 5
+1636991665535,log,Show Question: What is your age?
+1636991759255,log,Show Question: How repulsed by, <br> or drawn to the environment were you?
+1636991765893,log,Answer Question: 3
+1636991788227,log,Show Question: Hoe comfortabel ben je?
+1636991799956,log,Answer Question: 5

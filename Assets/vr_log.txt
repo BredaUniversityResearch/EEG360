@@ -137,3 +137,5 @@ time,type,text
 1636991765893,log,Answer Question: 3
 1636991788227,log,Show Question: Hoe comfortabel ben je?
 1636991799956,log,Answer Question: 5
+1637133132426,log,Show Question: Hoe comfortabel ben je?
+1637133643613,log,Show Question: Hoe comfortabel ben je?

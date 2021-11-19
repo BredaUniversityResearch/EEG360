@@ -55,6 +55,8 @@ public class VideoInteraction : InteractionObject
 
         SetVideo();
 
+        manager.DisableControllerLines();
+
         manager.SetInteractionToActive(this);
     }
 

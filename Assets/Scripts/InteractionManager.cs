@@ -5,6 +5,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.XR;
 
 public class InteractionManager : MonoBehaviour
 {
@@ -35,7 +36,6 @@ public class InteractionManager : MonoBehaviour
         DisableAllInteractions();
         LoadConfigData();
         OutputConfigText();
-        SetControllerPointers();
         m_connection.SetNetworkingSettings(m_settings);
         m_connection.StartNetworking();
     }
@@ -225,54 +225,23 @@ public class InteractionManager : MonoBehaviour
         }
     }
 
-    void SetControllerPointers()
-    {
-        Debug.Log("set pointers");
-
-        if (m_settings.controllers == true)
-        {
-            GameObject[] controllers = GameObject.FindGameObjectsWithTag("Controller");
-
-            foreach (GameObject controller in controllers)
-            {
-                GameObject pointer = Instantiate<GameObject>(m_pointerPrefab);
-                pointer.transform.SetParent(controller.transform);
-                pointer.transform.position = new Vector3(0, 0, 0);
-                pointer.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-            }
-        }
-        else
-        {
-            GameObject pointer = Instantiate<GameObject>(m_pointerPrefab);
-            pointer.transform.SetParent(Camera.main.transform);
-            pointer.transform.position = new Vector3(0, 0, 0);
-            pointer.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-        }
-    }
-
     public void EnableControllerLines()
     {
-        if (m_settings.controllers == true)
-        {
-            GameObject[] controllers = GameObject.FindGameObjectsWithTag("Controller");
+        GameObject[] controllers = GameObject.FindGameObjectsWithTag("Controller");
 
-            foreach (GameObject controller in controllers)
-            {
-                controller.GetComponentInChildren<ControllerScript>().EnableLine();
-            }
+        foreach (GameObject controller in controllers)
+        {
+            controller.GetComponentInChildren<NewControllerScript>().EnableLine();
         }
     }
 
     public void DisableControllerLines()
     {
-        if (m_settings.controllers == true)
-        {
-            GameObject[] controllers = GameObject.FindGameObjectsWithTag("Controller");
+        GameObject[] controllers = GameObject.FindGameObjectsWithTag("Controller");
 
-            foreach (GameObject controller in controllers)
-            {
-                controller.GetComponentInChildren<ControllerScript>().DisableLine();
-            }
+        foreach (GameObject controller in controllers)
+        {
+            controller.GetComponentInChildren<NewControllerScript>().DisableLine();
         }
     }
 
@@ -368,7 +337,6 @@ public class ConfigurationSettings
     public int m_networkPort = 8052;
     public Color m_neutralColor = Color.black;
     public string m_startingMessage = "type=text|text=Config File Not Found";
-    public bool m_controllers = true;
 
     [SerializeField]
     public string directory {
@@ -394,11 +362,5 @@ public class ConfigurationSettings
     public string startingMessage {
         get { return m_startingMessage; }
         set { m_startingMessage = value; }
-    }
-    [SerializeField]
-    public bool controllers
-    {
-        get { return m_controllers; }
-        set { m_controllers = value; }
     }
 }

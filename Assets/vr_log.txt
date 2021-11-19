@@ -139,3 +139,30 @@ time,type,text
 1636991799956,log,Answer Question: 5
 1637133132426,log,Show Question: Hoe comfortabel ben je?
 1637133643613,log,Show Question: Hoe comfortabel ben je?
+1637226587119,log,Show Question: Hoe comfortabel ben je?
+1637310539312,log,Show Text
+1637310558026,log,Show Text
+1637310576884,log,Show Question: Hoe comfortabel ben je?
+1637310588053,log,Show Question: Hoe comfortabel ben je?
+1637310599158,log,Show Question: Hoe comfortabel ben je?
+1637310635519,log,Show Question: Hoe comfortabel ben je?
+1637310661496,log,Answer Question: 3
+1637310842057,log,Show Photo: DDL_Dam_TEST_AllPeopleFill.jpg
+1637310851961,log,Show Photo: DDL_Dam_TEST_AllPeopleFill.jpg
+1637310857399,log,Hide Photo
+1637311023839,log,Show Photo: DDL_Dam_TEST_AllPeopleFill.jpg
+1637311029333,log,Hide Photo
+1637311158287,log,Show Photo: DDL_Dam_TEST_AllPeopleFill.jpg
+1637311163743,log,Hide Photo
+1637311170087,log,Show Question: How calm or negative did you feel <br> while watching the video?
+1637311179860,log,Answer Question: 4
+1637311278206,log,Show Photo: DDL_Dam_TEST_AllPeopleFill.jpg
+1637311283570,log,Hide Photo
+1637311294991,log,Show Question: How calm or negative did you feel <br> while watching the video?
+1637311306003,log,Answer Question: 5
+1637313144077,log,Show Question: How calm or negative did you feel <br> while watching the video?
+1637313190595,log,Show Question: How calm or negative did you feel <br> while watching the video?
+1637313323882,log,Show Question: How calm or negative did you feel <br> while watching the video?
+1637313457637,log,Show Question: How calm or negative did you feel <br> while watching the video?
+1637313491601,log,Show Question: How calm or negative did you feel <br> while watching the video?
+1637314342037,log,Show Question: How calm or negative did you feel <br> while watching the video?

@@ -2,11 +2,11 @@
 Application to show 360 photos &amp; videos, questions, and text inside a VR environment 
 
 # Unity Version
-2019.4 (LTS)
+2020.3(.22f1) (LTS)
 
 # Required Packages
 ## VR Packages
-The project uses the original (2019) XR system. Therefore uses the packages related to the original VR system
+The project uses the OpenXR System, and is therefore compatible with most common XR headsets.
 - SteamVR
 - Windows, Oculus, OpenVR (installed via Package Manager)
 

@@ -1,13 +1,12 @@
 {
-	"m_dataDirectory": "D:\\EXP_Lab\\E-PrimeVR\\UnityProject\\Content\\",	
+	"m_dataDirectory": "C:\\Users\\1003161\\Documents\\EXPERIENCELAB\\EEG360\\Assets\\Images\\Examples\\",	
 	"m_networkAddress": "127.0.0.1",
 	"m_networkPort": 8052,
 	"m_neutralColor": {
-		"r": 0.2,
-		"g": 0.2,
-		"b": 0.2,
+		"r": 0.9,
+		"g": 0.9,
+		"b": 0.9,
 		"a": 1.0
 	},
-	"m_startingMessage": "type=text|text=this is quite a thinng|duration=5000",
-	"m_controllers": true
+	"m_startingMessage": "type=valence|text=How negative or positive did you feel <br> while watching the video?|amount=9|label1=Very Negative|label2=|label3=|label4=|label5=|label6=|label7=|label8=|label9=Very Positive"
 }

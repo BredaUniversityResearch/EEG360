@@ -45,3 +45,124 @@ time,type,text
 1616146053204,log,Hide Video
 1624606770683,log,Show Text
 1624606776106,log,Hide Text
+1636706959427,log,Show Text
+1636706964674,log,Hide Text
+1636706979497,log,Show Text
+1636706984643,log,Hide Text
+1636706992587,log,Show Text
+1636707058266,log,Show Text
+1636707109475,log,Show Text
+1636707294681,log,Show Text
+1636707362188,log,Show Text
+1636707395272,log,Show Text
+1636707407828,log,Show Text
+1636707626713,log,Show Text
+1636708342159,log,Show Text
+1636708392157,log,Show Text
+1636708416229,log,Show Text
+1636708448235,log,Show Text
+1636708605702,log,Show Text
+1636708814263,log,Show Text
+1636708935652,log,Show Text
+1636708999909,log,Show Text
+1636709011500,log,Show Text
+1636709031087,log,Show Text
+1636709087442,log,Show Text
+1636710988249,log,Show Text
+1636711043781,log,Show Text
+1636711741579,log,Show Text
+1636711762863,log,Show Text
+1636712065075,log,Show Text
+1636712124545,log,Show Text
+1636712193829,log,Show Text
+1636712213859,log,Show Text
+1636712267713,log,Show Text
+1636712344207,log,Show Text
+1636712349655,log,Hide Text
+1636712357974,log,Show Text
+1636712386207,log,Hide Text
+1636712435225,log,Show Text
+1636712627190,log,Show Text
+1636712740374,log,Hide Text
+1636712772149,log,Show Text
+1636712798397,log,Show Text
+1636712906248,log,Show Text
+1636712964824,log,Show Text
+1636712974886,log,Hide Text
+1636712981790,log,Show Text
+1636712994298,log,Hide Text
+1636713099810,log,Show Text
+1636713120167,log,Hide Text
+1636713140459,log,Show Text
+1636713141563,log,Hide Text
+1636713146356,log,Show Text
+1636713159994,log,Hide Text
+1636714534029,log,Show Text
+1636714561304,log,Show Text
+1636714563754,log,Hide Text
+1636714569240,log,Show Text
+1636714639856,log,Show Text
+1636715123986,log,Show Text
+1636715284737,log,Show Question: What is your age?
+1636715284748,log,Show Question: What is your age?
+1636715284753,log,Show Question: What is your age?
+1636715284757,log,Show Question: What is your age?
+1636715299358,log,Show Question: What is your age?
+1636715299367,log,Show Question: What is your age?
+1636715299372,log,Show Question: What is your age?
+1636715299376,log,Show Question: What is your age?
+1636715379530,log,Show Question: What is your age?
+1636715423313,log,Show Question: What is your age?
+1636715578726,log,Show Question: What is your age?
+1636715622755,log,Show Question: What is your age?
+1636715670943,log,Show Question: What is your age?
+1636715744408,log,Show Question: What is your age?
+1636715750397,log,Answer Question: 3
+1636715756542,log,Show Question: What is your age?
+1636715764769,log,Answer Question: 3
+1636715770573,log,Show Question: What is your age?
+1636716130408,log,Show Question: What is your age?
+1636716137713,log,Answer Question: 3
+1636716287431,log,Show Question: What is your age?
+1636716733830,log,Show Question: How calm or negative did you feel <br> while watching the video?
+1636716745316,log,Answer Question: 7
+1636716763955,log,Show Question: How repulsed by, <br> or drawn to the environment were you?
+1636716769472,log,Answer Question: 1
+1636716803107,log,Show Question: How negative or positive did you feel <br> while watching the video?
+1636716806093,log,Answer Question: 4
+1636991639970,log,Show Question: How negative or positive did you feel <br> while watching the video?
+1636991649402,log,Answer Question: 5
+1636991665535,log,Show Question: What is your age?
+1636991759255,log,Show Question: How repulsed by, <br> or drawn to the environment were you?
+1636991765893,log,Answer Question: 3
+1636991788227,log,Show Question: Hoe comfortabel ben je?
+1636991799956,log,Answer Question: 5
+1637133132426,log,Show Question: Hoe comfortabel ben je?
+1637133643613,log,Show Question: Hoe comfortabel ben je?
+1637226587119,log,Show Question: Hoe comfortabel ben je?
+1637310539312,log,Show Text
+1637310558026,log,Show Text
+1637310576884,log,Show Question: Hoe comfortabel ben je?
+1637310588053,log,Show Question: Hoe comfortabel ben je?
+1637310599158,log,Show Question: Hoe comfortabel ben je?
+1637310635519,log,Show Question: Hoe comfortabel ben je?
+1637310661496,log,Answer Question: 3
+1637310842057,log,Show Photo: DDL_Dam_TEST_AllPeopleFill.jpg
+1637310851961,log,Show Photo: DDL_Dam_TEST_AllPeopleFill.jpg
+1637310857399,log,Hide Photo
+1637311023839,log,Show Photo: DDL_Dam_TEST_AllPeopleFill.jpg
+1637311029333,log,Hide Photo
+1637311158287,log,Show Photo: DDL_Dam_TEST_AllPeopleFill.jpg
+1637311163743,log,Hide Photo
+1637311170087,log,Show Question: How calm or negative did you feel <br> while watching the video?
+1637311179860,log,Answer Question: 4
+1637311278206,log,Show Photo: DDL_Dam_TEST_AllPeopleFill.jpg
+1637311283570,log,Hide Photo
+1637311294991,log,Show Question: How calm or negative did you feel <br> while watching the video?
+1637311306003,log,Answer Question: 5
+1637313144077,log,Show Question: How calm or negative did you feel <br> while watching the video?
+1637313190595,log,Show Question: How calm or negative did you feel <br> while watching the video?
+1637313323882,log,Show Question: How calm or negative did you feel <br> while watching the video?
+1637313457637,log,Show Question: How calm or negative did you feel <br> while watching the video?
+1637313491601,log,Show Question: How calm or negative did you feel <br> while watching the video?
+1637314342037,log,Show Question: How calm or negative did you feel <br> while watching the video?

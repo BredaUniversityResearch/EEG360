@@ -55,6 +55,8 @@ public class PhotoInteraction : InteractionObject
 
         DisplayPhoto();
 
+        manager.DisableControllerLines();
+
         manager.SetInteractionToActive(this);
     }
     

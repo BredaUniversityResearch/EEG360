@@ -3,10 +3,10 @@
 	"m_networkAddress": "127.0.0.1",
 	"m_networkPort": 8052,
 	"m_neutralColor": {
-		"r": 0.2,
-		"g": 0.2,
-		"b": 0.2,
+		"r": 0.9,
+		"g": 0.9,
+		"b": 0.9,
 		"a": 1.0
 	},
-	"m_startingMessage": "type=arousal|text=How calm or negative did you feel <br> while watching the video?|amount=9|label1=Very calm|label2=|label3=|label4=|label5=|label6=|label7=|label8=|label9=Very energized"
+	"m_startingMessage": "type=valence|text=How negative or positive did you feel <br> while watching the video?|amount=9|label1=Very Negative|label2=|label3=|label4=|label5=|label6=|label7=|label8=|label9=Very Positive"
 }

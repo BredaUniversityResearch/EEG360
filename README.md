@@ -3,13 +3,14 @@ Application to show 360 photos &amp; videos, questions, and text inside a VR env
 The application can use e-primes (or any other software's) TCP connection to show questions, 360 photos or 360 videos
 
 # Unity Version
-2020.3(.22f1) (LTS)
+2022.3(.18f1) (LTS)
 
 # Required Packages
 ## VR Packages
 The project uses the OpenXR System, and is therefore compatible with most common XR headsets.
 - SteamVR
 - Windows, Oculus, OpenVR (installed via Package Manager)
+- Varjo Base running via SteamVR
 
 ## Remaining
 - TextMeshPro

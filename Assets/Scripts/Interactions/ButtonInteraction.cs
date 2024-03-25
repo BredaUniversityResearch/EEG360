@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
+using System.Linq;
 
 public class ButtonInteraction : InteractionObject
 {
@@ -22,7 +23,7 @@ public class ButtonInteraction : InteractionObject
     private ServerMessage m_interactionData;
 
     private InteractionManager m_manager;
-    private Button[] m_buttons;
+    public List<Button> m_buttons = new List<Button>();
 
     private EventSystem m_eventSystem;
 
@@ -55,7 +56,7 @@ public class ButtonInteraction : InteractionObject
         {
             GameObject button;
 
-            //Creat object
+            //Create object
             button = Instantiate<GameObject>(m_buttonPrefab);
 
 
@@ -70,10 +71,10 @@ public class ButtonInteraction : InteractionObject
             else
                 button.GetComponent<ButtonScript>().SetButton(this, m_interactionData.labels[i], (i + 1).ToString(), GetCorrectSprite(m_interactionData.type, m_interactionData.amount, i));
 
+            m_buttons.Add(button.GetComponent<Button>());
         }
 
         //Set starting values
-        m_buttons = GetComponentsInChildren<Button>();
         SetupButtonClicks();
         if (m_questionText != null)
             m_questionText.text = message.text;
@@ -103,10 +104,12 @@ public class ButtonInteraction : InteractionObject
 
     void ClearButtons()
     {
-        foreach (Button button in m_buttons)
-            GameObject.Destroy(button.gameObject);
+        for (int i = m_buttons.Count-1; i >= 0; i--)
+        {
+            Destroy(m_buttons[i].gameObject);
+        }
 
-        m_buttons = null;
+        m_buttons.Clear();
     }
 
     public override string GetInteractionType(InteractionManager manager)

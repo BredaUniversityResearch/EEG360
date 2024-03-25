@@ -33,8 +33,9 @@ public class InteractionManager : MonoBehaviour
         DisableAllInteractions();
         LoadConfigData();
         OutputConfigText();
-        NetworkingScript.Instance.SetNetworkingSettings(GetNetworkSettings(m_settings));
+        NetworkingScript.Instance.SetNetworkingSettings(m_settings.address,m_settings.port);
         NetworkingScript.Instance.StartNetworking();
+        NetworkingScript.Instance.m_NewMessageEvent.AddListener(HandleIncomingMessages);
     }
 
     void Update()
@@ -42,7 +43,6 @@ public class InteractionManager : MonoBehaviour
         if (!m_performedStartInteraction)
             PerformStartInteraction();
 
-        CheckLatestMessage();
         UpdateActiveInteractions();
         CheckTestMessage();
     }
@@ -74,7 +74,6 @@ public class InteractionManager : MonoBehaviour
 
     void CheckTestMessage()
     {
-
         if (m_testMessage != "")
         {
 
@@ -85,16 +84,10 @@ public class InteractionManager : MonoBehaviour
         }
     }
 
-    void CheckLatestMessage()
+    void HandleIncomingMessages(string message)
     {
-        if ((NetworkingScript.Instance.GetLatestMessage() != "")&& (NetworkingScript.Instance.GetLatestMessage() != null)){
-
-            ServerMessage sMessage = DecodeMessage(NetworkingScript.Instance.GetLatestMessage());
-
-            PerformInteraction(sMessage);
-
-            NetworkingScript.Instance.ResetLastMessage();
-        }
+        ServerMessage sMessage = DecodeMessage(message);
+        PerformInteraction(sMessage);
     }
 
     public void SendMessageToServer(string messsage)
@@ -220,14 +213,6 @@ public class InteractionManager : MonoBehaviour
             string json = reader.ReadToEnd();
             m_settings = JsonUtility.FromJson<ConfigurationSettings>(json);
         }
-    }
-
-    NetworkSettings GetNetworkSettings(ConfigurationSettings config)
-    {
-        NetworkSettings settings = new NetworkSettings();
-        settings.address = config.address;
-        settings.port = config.port;
-        return settings;
     }
 
     public void EnableControllerLines()

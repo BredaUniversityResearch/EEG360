@@ -5,6 +5,12 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class NewMessageEvent : UnityEvent<string>
+{
+}
 
 public class NetworkingScript : MonoBehaviour
 {
@@ -22,7 +28,10 @@ public class NetworkingScript : MonoBehaviour
 
     // Last message received by the client
     string LastMessage = null;
+    bool EventExecuted = true;
     #endregion
+
+    public NewMessageEvent m_NewMessageEvent;
 
     public static NetworkingScript _instance;
     public static NetworkingScript Instance { get { return _instance; } }
@@ -35,6 +44,18 @@ public class NetworkingScript : MonoBehaviour
             _instance = this;
 
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        if (m_NewMessageEvent == null)
+            m_NewMessageEvent = new NewMessageEvent();
+    }
+
+    private void Update()
+    {
+        if (!EventExecuted)
+            ExecuteNewMessageEvent();
     }
 
     void OnApplicationQuit()
@@ -57,10 +78,14 @@ public class NetworkingScript : MonoBehaviour
         tcpListenerThread.Abort();
     }
 
-    public void SetNetworkingSettings(NetworkSettings settings)
+    //Set the address and port, use "" or -1 to skip either
+    public void SetNetworkingSettings(string newAddress = "", int newPort  = -1)
     {
-        addres = settings.address;
-        port = settings.port;
+        if (newAddress != "")
+            addres = newAddress;
+
+        if (newPort > 0)
+            port = newPort;
     }
 
     //Retrieve latest server message
@@ -73,6 +98,14 @@ public class NetworkingScript : MonoBehaviour
     public void ResetLastMessage()
     {
         LastMessage = "";
+        EventExecuted = true;
+    }
+
+    //Run the event sending the latest message
+    void ExecuteNewMessageEvent()
+    {
+        m_NewMessageEvent.Invoke(LastMessage);
+        EventExecuted = true;
     }
 
     //Send new message 
@@ -108,6 +141,7 @@ public class NetworkingScript : MonoBehaviour
                             string clientMessage = Encoding.ASCII.GetString(incommingData);
                             UnityEngine.Debug.Log("client message received as: " + clientMessage);
                             LastMessage = clientMessage;
+                            EventExecuted = false;
                         }
                     }
                 }
@@ -175,22 +209,5 @@ public class NetworkingScript : MonoBehaviour
 
         }
         return false;
-    }
-}
-
-public class NetworkSettings
-{
-    public string m_address = "127.0.0.1";
-    public int m_port = 8052;
-
-    public string address
-    {
-        get { return m_address; }
-        set { m_address = value; }
-    }
-    public int port
-    {
-        get { return m_port; }
-        set { m_port = value; }
     }
 }

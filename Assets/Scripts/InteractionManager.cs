@@ -7,11 +7,9 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.XR;
 
+[RequireComponent(typeof(NetworkingScript))]
 public class InteractionManager : MonoBehaviour
 {
-
-    private NetworkingScript m_connection = null;
-
     [SerializeField]
     private InteractionObject[] m_interactionTypes = null;
 
@@ -32,12 +30,11 @@ public class InteractionManager : MonoBehaviour
 
     void Start()
     {
-        m_connection = GetComponent<NetworkingScript>();
         DisableAllInteractions();
         LoadConfigData();
         OutputConfigText();
-        m_connection.SetNetworkingSettings(m_settings);
-        m_connection.StartNetworking();
+        NetworkingScript.Instance.SetNetworkingSettings(GetNetworkSettings(m_settings));
+        NetworkingScript.Instance.StartNetworking();
     }
 
     void Update()
@@ -90,19 +87,19 @@ public class InteractionManager : MonoBehaviour
 
     void CheckLatestMessage()
     {
-        if ((m_connection.GetLatestMessage() != "")&& (m_connection.GetLatestMessage() != null)){
+        if ((NetworkingScript.Instance.GetLatestMessage() != "")&& (NetworkingScript.Instance.GetLatestMessage() != null)){
 
-            ServerMessage sMessage = DecodeMessage(m_connection.GetLatestMessage());
+            ServerMessage sMessage = DecodeMessage(NetworkingScript.Instance.GetLatestMessage());
 
             PerformInteraction(sMessage);
 
-            m_connection.ResetLastMessage();
+            NetworkingScript.Instance.ResetLastMessage();
         }
     }
 
     public void SendMessageToServer(string messsage)
     {
-        m_connection.SendMessageToServer(messsage);
+        NetworkingScript.Instance.SendMessageToServer(messsage);
     }
 
     void PerformInteraction(ServerMessage message)
@@ -223,6 +220,14 @@ public class InteractionManager : MonoBehaviour
             string json = reader.ReadToEnd();
             m_settings = JsonUtility.FromJson<ConfigurationSettings>(json);
         }
+    }
+
+    NetworkSettings GetNetworkSettings(ConfigurationSettings config)
+    {
+        NetworkSettings settings = new NetworkSettings();
+        settings.address = config.address;
+        settings.port = config.port;
+        return settings;
     }
 
     public void EnableControllerLines()

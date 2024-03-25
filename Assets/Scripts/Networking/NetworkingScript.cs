@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class NetworkingScript : MonoBehaviour
 {
@@ -27,6 +23,19 @@ public class NetworkingScript : MonoBehaviour
     // Last message received by the client
     string LastMessage = null;
     #endregion
+
+    public static NetworkingScript _instance;
+    public static NetworkingScript Instance { get { return _instance; } }
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+            Destroy(this.gameObject);
+        else
+            _instance = this;
+
+        DontDestroyOnLoad(gameObject);
+    }
 
     void OnApplicationQuit()
     {
@@ -48,7 +57,7 @@ public class NetworkingScript : MonoBehaviour
         tcpListenerThread.Abort();
     }
 
-    public void SetNetworkingSettings(ConfigurationSettings settings)
+    public void SetNetworkingSettings(NetworkSettings settings)
     {
         addres = settings.address;
         port = settings.port;
@@ -166,5 +175,22 @@ public class NetworkingScript : MonoBehaviour
 
         }
         return false;
+    }
+}
+
+public class NetworkSettings
+{
+    public string m_address = "127.0.0.1";
+    public int m_port = 8052;
+
+    public string address
+    {
+        get { return m_address; }
+        set { m_address = value; }
+    }
+    public int port
+    {
+        get { return m_port; }
+        set { m_port = value; }
     }
 }

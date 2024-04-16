@@ -97,6 +97,8 @@ public class InteractionManager : MonoBehaviour
 
     void PerformInteraction(ServerMessage message)
     {
+        DisableAllInteractions();
+
         foreach (InteractionObject interaction in m_interactionTypes)
         {
             if (interaction.GetInteractionType(this) == message.type)
